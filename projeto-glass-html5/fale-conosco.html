@@ -1,47 +1,86 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
 
-[AQUI ENTRA UMA FOTO]
+<head>
+  <meta charset = "UTF-8"/>
+  <title>Google Glass</title>
+  <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="_css/form.css">
+</head>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+<script language="javascript" src="_javascript/funcoes.js"></script>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+<body>
+<div id="interface">
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+  <header id="cabecalho">
+  <hgroup>
+  <h1>Google Glass</h1>
+  <h2>A revolução do Google está chegando</h2>
+  </hgroup>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+<img id="icone" src = "_imagens/contato.png">
+<nav id="menu">
+<h1>Menu Principal</h1>
+<ul type="disc">
+  <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+  <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+  <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+  <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+  <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>
+</header>
+<form method="post" id="fContato" action="mailto:contato@teste.com">
+  <fieldset id="usuario">
+    <legend>Identificação do Usuário</legend>
+        <p>Nome:<input type="text" name="tNome" id="cNome" size="20" maxlength="20" placeholder="Nome Completo"/></p>
+        <p>Senha:<input type="password" name="tSenha" id="cSenha" size="20" maxlength="20"/></p>
+        <p>E-mail:<input type="email" name="tEmail" id="cEmail" size="30" maxlength="30"/></p>
+        <fieldset><legend> Sexo:</legend>
+            <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br>
+            <input type="radio" name="tSexo" id="cFem" /><label for="cFem">Feminino</label></fieldset>
+        <p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"></p>
+  </fieldset>
 
-Quero um Google Glass
+<fieldset id="endereco">
+  <legend>Endereço do Usuário</legend>
+      <p>Logradouro:<input type="text" name="tLogradouro" id="cLogradouro" size="50" maxlength="100"/></p>
+      <p>Número:<input type="number" name="tNumero" id="cNumero" min="0" max="9999" /></p>
+      <p>Estado:
+      <select name="tEst" id="cEst">
+        <option>Opção 1</option>
+        <option>Opção 2</option></p>
+      </select>
+      <p>Cidade:
+      <select name="tCid" id="cCid">
+        <optgroup label="Norte"><option>Cidade 1</option></optgroup>
+        <optgroup label="Sul">
+        <option>Cidade 2</option></optgroup>
+      </select>
+      </p>
+</fieldset>
+<fieldset>
+
+<legend id="mensagem">Mensagem do Usuário</legend>
+    <p>Grau de Urgência:<input type="range" name="tGrau" id="cGrau" min="0" max="10"/></p>
+    <p>Mensagem:<textarea name="tMen" id="cMen" placeholder="Digite sua mensagem" cols="50" rows="4"></p>
+</fieldset>
+<fieldset id="quero">
+<legend>Quero um Google Glass</legend>
     Gostaria de adquirir um Google Glass quando disponível
     Cor:
     Quantidade:
     Preço Total: R$
 
-
+</fieldset>
 [BOTÃO ENVIAR]
-
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+</form>
+<footer id="rodape">
+<p>Copyright &copy 2013 - by Gustavo Guanabara<br>
+<a href="http://facebook.com">Facebook</a> | <a href="http://twitter.com">Twitter</a></p>
+</footer>
+</div>
+</body>
+</html>
