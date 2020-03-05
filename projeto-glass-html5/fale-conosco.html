@@ -9,7 +9,13 @@
 </head>
 
 <script language="javascript" src="_javascript/funcoes.js"></script>
-
+<script>
+  function calc_total(){
+    var qtd = parseInt(document.getElementById('cNumber').value);
+    tot = qtd * 1500;
+    document.getElementById('cTot').value = tot;
+  }
+</script>
 
 <body>
 <div id="interface">
@@ -32,7 +38,7 @@
 </ul>
 </nav>
 </header>
-<form method="post" id="fContato" action="mailto:contato@teste.com">
+<form method="post" id="fContato" action="mailto:contato@teste.com" oninput="calc_total();">
   <fieldset id="usuario">
     <legend>Identificação do Usuário</legend>
         <p>Nome:<input type="text" name="tNome" id="cNome" size="20" maxlength="20" placeholder="Nome Completo"/></p>
@@ -47,7 +53,7 @@
 <fieldset id="endereco">
   <legend>Endereço do Usuário</legend>
       <p>Logradouro:<input type="text" name="tLogradouro" id="cLogradouro" size="50" maxlength="100"/></p>
-      <p>Número:<input type="number" name="tNumero" id="cNumero" min="0" max="9999" /></p>
+      <p>Número:<input type="number" name="tNumero" id="cNumero" min="0" max="9999"/></p>
       <p>Estado:
       <select name="tEst" id="cEst">
         <option>Opção 1</option>
@@ -65,17 +71,17 @@
 
 <legend id="mensagem">Mensagem do Usuário</legend>
     <p>Grau de Urgência:<input type="range" name="tGrau" id="cGrau" min="0" max="10"/></p>
-    <p>Mensagem:<textarea name="tMen" id="cMen" placeholder="Digite sua mensagem" cols="50" rows="4"></p>
+    <p>Mensagem:<textarea name="tMen" id="cMen" placeholder="Digite" cols="50" rows="4"></textarea></p>
 </fieldset>
 <fieldset id="quero">
 <legend>Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <p><input type="checkbox" name="tPed" id="cPed" checked/> Gostaria de adquirir um Google Glass quando disponível</p>
+    <p><input type="color" name="tCor" id="cCor"/>Cor:</p>
+    <p>Quantidade:<input type="number" name="tNumber" id="cNumber" min="0" max="999"/></p>
+    <p>Preço Total: R$<input type="text" name="tTot" id="cTot" placeholder="Valor total" readonly/></p>
 
 </fieldset>
-[BOTÃO ENVIAR]
+<input type="image" name="tEnviar" id="cEnviar" src="_imagens/botao-enviar.png"/>
 </form>
 <footer id="rodape">
 <p>Copyright &copy 2013 - by Gustavo Guanabara<br>
