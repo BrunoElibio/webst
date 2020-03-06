@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <style>
+            h1{
+                font-size: 20pt;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+            legend,fieldset{
+                font-size: 15pt;
+                color: aqua;
+                background-color: cadetblue;
+                width: min-content;
+            }
+            form,input{
+                width: 250px;
+                margin:auto;
+            }
+
+        </style>
+        <script type= "text/javascript" src="exp.js"></script>
+    </head>
+
+    <body>
+
+        <h1>Expressões Regulares</h1>
+
+        <form id="formulario">
+            <fieldset>
+                <legend>Validar CPF</legend>
+                <p>CPF:<input type="text" id="cpf" min="20" max="25"/></p>
+                <p>E-mail:<input type="text" id="email"/></p>
+                <a href="#" onclick="validar();"> Validar </a>
+            </fieldset>
+        </form>
+
+    </body>
+
+
+
+</html>
